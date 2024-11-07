@@ -68,12 +68,11 @@
     </div>
     <button onclick="checkPassword()">Submit</button>
 
-    <!-- Access code input, shown only if the first password is correct -->
+    <!-- Access code field, shown only if the first password is correct -->
     <div id="access-code-field">
       <p>Access Code:</p>
       <div class="input-container">
-        <input type="password" id="access-code" placeholder="Enter access code">
-        <span class="toggle-visibility" onclick="toggleAccessCodeVisibility()">👁️</span>
+        <input type="text" id="access-code" readonly value="X_gHiGv-j">
       </div>
     </div>
   </div>
@@ -83,12 +82,6 @@
     function togglePasswordVisibility() {
       const passwordField = document.getElementById("password");
       passwordField.type = passwordField.type === "password" ? "text" : "password";
-    }
-
-    // Function to toggle the visibility of the access code input
-    function toggleAccessCodeVisibility() {
-      const accessCodeField = document.getElementById("access-code");
-      accessCodeField.type = accessCodeField.type === "password" ? "text" : "password";
     }
 
     // Function to check the entered password
